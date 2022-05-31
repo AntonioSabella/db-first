@@ -2,23 +2,23 @@
 
 # Dealership
 
-## Modello: Car
+## Model: Car
 
 ## table: Cars
 
 - id :                   BIGINT                PRIMARY KEY, UNIQUE, AUTO_INCREMENT, NOTNULL
-- brand_name:            VARCHAR(30)           NOTNULL
-- model :                VARCHAR(30)           NOTNULL
-- car_image :            VARCHAR(30)           NULL
+- brand_name :           VARCHAR(30)           NOTNULL, INDEX
+- model :                VARCHAR(30)           NOTNULL, INDEX
+- car_image :            VARCHAR(255)          NULL
 - matriculation_year :   YEAR(YYYY)            NULL
 - mileage :              MEDIUMINT             NOTNULL
-- price :                DECIMAL(7,2)99999.99  NULL
+- price :                DECIMAL(8,2)999999.99 NULL
 - discount :             TINYINT(t/f - 1/0)    NULL
-- discount_value :       DECIMAL(7,2) 99999.99 NOTNULL
+- discount_value :       DECIMAL(7,2)999999.99 NOTNULL
 - financing :            TINYINT(t/f - 1/0)    NULL
 - monthly_rate:          DECIMAL(5, 2) 999.99  NULL
 - conditions :           VARCHAR(15)           NULL
-- color :                VARCHAR(15)           NULL
+- color :                VARCHAR(25)           NOTNULL
 - optionals :            TINYINT(t/f - 1/0)    NULL
 - optionals_description :TEXT                  NULL
 - power_hP(horsePower) : SMALLINT              NULL
